@@ -3,28 +3,30 @@
 
 int main(){
 
-    char c;         // 1 caractere                      
-    int  d;         // inteiro                      
-    long int ld;    // inteiro longo          
-    float    f;     // float                   
-    double lf;      // double                  
-    long double Lf; // long double 
-    char s[10];     // string de 10 caracteres  
+    char sexo;         // 1 caractere                      
+    int  idade;         // inteiro                      
+    long int quantidade_de_pessoas;    // inteiro longo          
+    float  altura;     // float                   
+    double salario;      // double                  
+    long double variavel_cientifica; // long double 
+    char nome[10];     // string de 10 caracteres  
 
-    c =  input_c("Digite um char: ");                 
-    d =  input_d("Digite um inteiro: ");              
-    ld = input_ld("Digite um inteiro longo: ");       
-    f =  input_f("Digite um float: ");                
-    lf = input_lf("Digite um double: ");              
-    Lf = input_Lf("Digite um long double: "); 
-    input_s("Digite uma string: ",s,sizeof(s)); 
+    sexo =  input_c("Digite o sexo: ");                 
+    idade =  input_d("Digite a idade: ");              
+    quantidade_de_pessoas = input_ld("Digite a quantidade de pessoas: ");       
+    altura =  input_f("Digite a altura: ");                
+    salario = input_lf("Digite o salario: ");              
+    variavel_cientifica = input_Lf("Digite a valor cientifico: "); 
+    input_s("Digite o nome: ",nome,sizeof(nome)); 
+    idade =  input_d("Digite a idade: "); 
 
-    printf("%c\n",c);
-    printf("%d\n",d);
-    printf("%ld\n",ld);
-    printf("%f\n",f);
-    printf("%lf\n",lf);
-    printf("%Lf\n",Lf);
-    printf("%s\n",s);
+    printf("Sexo = %c\n",sexo);
+    printf("Idade = %d\n",idade);
+    printf("Quantidade de pessoas = %ld\n",quantidade_de_pessoas);
+    printf("Altura = %f\n",altura);
+    printf("Salario = %lf\n",salario);
+    printf("Variavel cientifica = %Lf\n",variavel_cientifica);
+    printf("Nome = %s\n",nome);
+    printf("Idade = %d\n",idade);
     return 0;
 }

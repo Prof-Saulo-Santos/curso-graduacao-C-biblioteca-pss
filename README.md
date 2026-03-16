@@ -25,37 +25,43 @@ int, long int, float, double, long double, char e char[].
 	printf("double      %lf  \n",DBL_MAX);
 	printf("long double %Lf  \n",LDBL_MAX);
 
-## 3) As funções bloqueiam entradas inválidas de números inteiros e números flutuantes:
+## 3) A biblioteca possui funçoes para: 
 
-## 4) As funções limpam corretamente o buffer do teclado.
+- Bloquear leituras inválidas de números inteiros e números flutuantes
+- Limpar corretamente o buffer do teclado
+- Impedir o buffer overflow na leitura de string de caracteres.
 
-## 5) Impedem o buffer overflow na leitura de string de caracteres
+## 4) Modo de uso:
 
-## 6) Modo de uso:
+Copie e cole os arquivos pss.c e pss.h na pasta raiz de seu projeto.
+Insira #include "pss.h" no início do arquivo que fará uso das funções.
+Exemplo:
 
-	Copie e cole os arquivos pss.c e pss.h na pasta raiz de seu projeto.
-	Insira #include "pss.h" no início do arquivo que fará uso das funções.
-	Exemplo:
+```c
+#include <stdio.h>
+#include "pss.h"
 
-	#include <stdio.h>
-	#include "pss.h"
+int main(){
 
-	int main(){
-		double lf = input_lf("Digite um double: "); 
-		printf("O numero digitado foi: %lf", lf);
-		return 0;
-	}
+	double salario = input_lf("Digite um salario: ");  // Você não precisa mais adicionar um printf() antes da leitura.
 
-	Se estiver usando o DEVC++ inclua os arquivos em seu projeto seguindo os passos:
-		Vá na opção "Projeto -> Adicionar ao Projeto" e inclua os arquivos pss.c e pss.h
-		Compile usando a opção: F12		
+	printf("%lf", salario);
 
-	Se estiver usando o CodeBlock inclua o arquivos em seu projeto seguindo os passos:
-		Vá na opção "Projeto -> Adicionar Arquivo" e inclua os arquivos pss.c e pss.h
-		Compile usando a opção: Ctrl+F9
+	return 0;
+}
+```
+---
+Se estiver usando o DEVC++ inclua os arquivos em seu projeto seguindo os passos:
+- Vá na opção "Projeto -> Adicionar ao Projeto" e inclua os arquivos pss.c e pss.h
+- Compile usando a opção: F12		
 
-	Se não estiver usando uma IDE, compile com:
-	    gcc main.c pss.c pss.h -o teste.exe	
+Se estiver usando o CodeBlock inclua o arquivos em seu projeto seguindo os passos:
+- Vá na opção "Projeto -> Adicionar Arquivo" e inclua os arquivos pss.c e pss.h
+- Compile usando a opção: Ctrl+F9
+
+Se estiver usando o terminal:
+- compile com: gcc main.c pss.c pss.h -o teste.exe
+- execute com: ./teste.exe	
 
 
 
