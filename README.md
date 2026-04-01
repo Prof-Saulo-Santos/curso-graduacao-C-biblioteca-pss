@@ -1,41 +1,41 @@
 ![image](image/prof-saulo-santos-pss-c.png)
 
 # pss-library
-Esta é uma biblioteca em C desenvolvida para otimizar a leitura de string de caracteres, números inteiros e de ponto flutuante. As funções evitam comportamentos inesperados e erros de leitura, overflow e buffer overflow.
+This is a C library developed to optimize the reading of character strings, integer numbers, and floating-point numbers. The functions prevent unexpected behaviors, read errors, overflow, and buffer overflow.
 
-A leitura via entrada padrão está disponível para os seguintes tipos de dados: 
+Reading via standard input is available for the following data types: 
 
-int, long int, float, double, long double, char e char[].
+int, long int, float, double, long double, char, and char[].
 
-## 1) Exemplos de uso:
+## 1) Usage Examples:
 
-	char c         = input_c("Digite um char: ");                 
-	int  d         = input_d("Digite um inteiro: ");              
-	long int ld    = input_ld("Digite um inteiro longo: ");       
-	float    f     = input_f("Digite um float: ");                
-	double lf      = input_lf("Digite um double: ");              
-	long double Lf = input_Lf("Digite um long double: "); 
-	char s[10];      input_s("Digite uma string: ",s,sizeof(s)); 
+	char c         = input_c("Enter a char: ");                 
+	int  d         = input_d("Enter an integer: ");              
+	long int ld    = input_ld("Enter a long integer: ");       
+	float    f     = input_f("Enter a float: ");                
+	double lf      = input_lf("Enter a double: ");              
+	long double Lf = input_Lf("Enter a long double: "); 
+	char s[10];      input_s("Enter a string: ", s, sizeof(s)); 
 
-## 2) Ocorrendo overflow, os tipos retornarão:
+## 2) If overflow occurs, the types will return:
 
-	printf("int         %d   \n",INT_MAX);
-	printf("long int    %ld  \n",LONG_MAX);
-	printf("float       %f   \n",FLT_MAX);
-	printf("double      %lf  \n",DBL_MAX);
-	printf("long double %Lf  \n",LDBL_MAX);
+	printf("int         %d   \n", INT_MAX);
+	printf("long int    %ld  \n", LONG_MAX);
+	printf("float       %f   \n", FLT_MAX);
+	printf("double      %lf  \n", DBL_MAX);
+	printf("long double %Lf  \n", LDBL_MAX);
 
-## 3) A biblioteca possui funçoes para: 
+## 3) The library features functions to: 
 
-- Bloquear leituras inválidas de números inteiros e números flutuantes
-- Limpar corretamente o buffer do teclado
-- Impedir o buffer overflow na leitura de string de caracteres.
+- Block invalid readings of integer and floating-point numbers
+- Correctly clear the keyboard buffer
+- Prevent buffer overflow when reading character strings.
 
-## 4) Modo de uso:
+## 4) How to use:
 
-Copie e cole os arquivos pss.c e pss.h na pasta raiz de seu projeto.
-Insira #include "pss.h" no início do arquivo que fará uso das funções.
-Exemplo:
+Copy and paste the `pss.c` and `pss.h` files into the root folder of your project.
+Insert `#include "pss.h"` at the beginning of the file that will use the functions.
+Example:
 
 ```c
 #include <stdio.h>
@@ -43,32 +43,32 @@ Exemplo:
 
 int main(){
 
-	double salario = input_lf("Digite um salario: ");  // Você não precisa mais adicionar um printf() antes da leitura.
+	double salary = input_lf("Enter a salary: ");  // You no longer need to add a printf() before reading.
 
-	printf("%lf", salario);
+	printf("%lf", salary);
 
 	return 0;
 }
 ```
 ---
-Se estiver usando o DEVC++ inclua os arquivos em seu projeto seguindo os passos:
-- Vá na opção "Projeto -> Adicionar ao Projeto" e inclua os arquivos pss.c e pss.h
-- Compile usando a opção: F12		
+If you are using DEV-C++, include the files in your project following these steps:
+- Go to "Project -> Add to Project" and include the `pss.c` and `pss.h` files.
+- Compile using the option: F12		
 
-Se estiver usando o CodeBlock inclua o arquivos em seu projeto seguindo os passos:
-- Vá na opção "Projeto -> Adicionar Arquivo" e inclua os arquivos pss.c e pss.h
-- Compile usando a opção: Ctrl+F9
+If you are using Code::Blocks, include the files in your project following these steps:
+- Go to "Project -> Add Files" and include the `pss.c` and `pss.h` files.
+- Compile using the option: Ctrl+F9
 
-Se estiver usando o terminal:
-- compile com: gcc main.c pss.c pss.h -o teste.exe
-- execute com: ./teste.exe	
+If you are using the terminal:
+- compile with: `gcc main.c pss.c pss.h -o test.exe`
+- execute with: `./test.exe`	
 
 
 
-## 7) Contribuições são bem-vindas!
+## 7) Contributions are welcome!
 
-Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novos recursos para esta biblioteca. Basta fazer um fork do repositório, fazer as alterações e enviar uma solicitação de pull.
+Feel free to contribute with improvements, bug fixes, or new features for this library. Just fork the repository, make the changes, and submit a pull request.
 
-## 8) Licença:
+## 8) License:
 
-Este projeto é distribuído sob a Licença BSD 3-Clause. Consulte o arquivo LICENSE.md para obter mais informações.
+This project is distributed under the BSD 3-Clause License. See the `LICENSE.md` file for more information.
